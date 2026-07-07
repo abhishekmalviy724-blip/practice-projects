@@ -1,4 +1,27 @@
 
+# df=pd.DataFrame({ 
+#     'Drug_Type':['Tablet', 'Injection', 'Syrup'],
+#   'Stock_Available':[10,20,30]
+# })
+# print(df.groupby('Drug_Type')['Stock_Available'].sum())
+
+# df=pd.DataFrame({
+#     'Disease':["Covid",'Maleria','Typhoid','Typhoid'],
+#     'Patient_ID':["JDNX384","O383IXI","09283099",'09283099'],
+# })
+# print(df.groupby("Disease")['Patient_ID'].count())
+
+# df=pd.DataFrame({
+#   'Patient_ID'  :['P01','P02','P03','P04'],
+#   'Patient_Name':['Abhi','Sanvi','Sonu','Monu']
+# })
+# df1=pd.DataFrame({
+#   'Patient_ID'  :['P05','P06','P07','P08'],
+#   'Patient_Name':['Abhi','Sanvi','Sonu','Monu']
+# })
+# print(pd.merge(df,df1,on='Patient_Name',how='left'))
+
+
 import numpy as np
 # a=np.array([1,2,3,4,5])
 # print(a.ndim)
