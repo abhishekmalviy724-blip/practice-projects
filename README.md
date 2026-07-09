@@ -1,4 +1,12 @@
 
+# # year=['2023', '2024', '2025']
+# store_A=[30, 50, 45]
+# store_B=[40, 35, 60]
+# # plt.plot(year,year,store_A,color="red",marker="o",linewidth=3,label='Store A')
+# # plt.plot(year,year,store_B,color="purple",marker="o",linewidth=3,label='Store B')
+# # plt.grid(True)
+# # plt.legend()
+# # plt.show()
 # df=pd.DataFrame({ 
 #     'Drug_Type':['Tablet', 'Injection', 'Syrup'],
 #   'Stock_Available':[10,20,30]
