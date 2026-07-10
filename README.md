@@ -1,4 +1,28 @@
+print("=== Student Grade Calculator ===")
 
+name = input("Student ka naam: ")
+
+math = int(input("Math ke marks: "))
+science = int(input("Science ke marks: "))
+english = int(input("English ke marks: "))
+
+total = math + science + english
+percentage = total / 3
+
+print("\nStudent:", name)
+print("Total Marks:", total)
+print("Percentage:", percentage)
+
+if percentage >= 90:
+    print("Grade: A+")
+elif percentage >= 75:
+    print("Grade: A")
+elif percentage >= 60:
+    print("Grade: B")
+elif percentage >= 40:
+    print("Grade: C")
+else:
+    print("Grade: Fail")
 # # year=['2023', '2024', '2025']
 # store_A=[30, 50, 45]
 # store_B=[40, 35, 60]
