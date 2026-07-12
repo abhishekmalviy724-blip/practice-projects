@@ -1,3 +1,16 @@
+import pandas as pd
+
+data = {
+    "Name": ["Aman", "Priya", "Rahul"],
+    "Age": [21, 22, 20],
+    "City": ["Delhi", "Mumbai", "Jaipur"]
+}
+
+df = pd.DataFrame(data)
+
+print(df)
+
+print(df[df["Age"] > 21])
 print("=== Table Generator ===")
 
 number = int(input("Kis number ka table chahiye? "))
