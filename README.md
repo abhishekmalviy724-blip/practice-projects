@@ -1,5 +1,22 @@
 import pandas as pd
 
+a = pd.read_csv("Walmart_Sales.csv")
+
+a.fillna(method="ffill", inplace=True)
+
+a.to_csv("Walmart_Sales.csv", index=False)
+
+print(a)
+
+
+
+
+
+
+
+
+import pandas as pd
+
 data = {
     "Name": ["Aman", "Priya", "Rahul"],
     "Age": [21, 22, 20],
