@@ -1,5 +1,26 @@
 import pandas as pd
 
+data = {
+    "Name": ["Amit", "Rahul", "Priya", "Neha"],
+    "Age": [22, 25, 21, 24],
+    "Salary": [30000, 45000, 35000, 40000]
+}
+
+df = pd.DataFrame(data)
+
+print(df[df["Salary"] > 35000])
+
+df["Bonus"] = df["Salary"] * 0.10
+
+print(df)
+
+print("Average Salary:", df["Salary"].mean())
+
+
+
+
+import pandas as pd
+
 a = pd.read_csv("Walmart_Sales.csv")
 
 a.fillna(method="ffill", inplace=True)
