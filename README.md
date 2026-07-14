@@ -1,6 +1,25 @@
 import pandas as pd
 
 data = {
+    "Name": ["Amit", "Rahul", "Neha"],
+    "Marks": [80, 90, 85]
+}
+
+df = pd.DataFrame(data)
+
+print(df)
+
+print(df[df["Marks"] > 80])
+
+print(df["Marks"].mean())
+
+
+
+
+
+import pandas as pd
+
+data = {
     "Name": ["Amit", "Rahul", "Priya", "Neha"],
     "Age": [22, 25, 21, 24],
     "Salary": [30000, 45000, 35000, 40000]
