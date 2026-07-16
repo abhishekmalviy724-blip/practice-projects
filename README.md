@@ -1,3 +1,25 @@
+import pandas as pd
+
+# 1. Sample Data banana
+data = {
+    'Product': ['Laptop', 'Mouse', 'Laptop', 'Keyboard', 'Mouse', 'Keyboard'],
+    'Sales': [50000, 500, 48000, 1200, 600, 1500]
+}
+
+df = pd.DataFrame(data)
+
+
+aggregated_df = df.groupby('Product')['Sales'].sum().reset_index()
+
+print("Original Data:")
+print(df)
+print("\nAggregated Data (Total Sales per Product):")
+print(aggregated_df)
+
+
+
+
+
 
 import matplotlib.pyplot as plt
 
