@@ -1,3 +1,20 @@
+
+import matplotlib.pyplot as plt
+
+x = [1, 2, 3, 4, 5]
+y = [2, 4, 6, 8, 10]
+
+plt.figure(figsize=(6, 4))
+plt.plot(x, y, marker="o", linewidth=2, label="y = 2x")
+plt.title("Simple Line Graph")
+plt.xlabel("X-axis")
+plt.ylabel("Y-axis")
+plt.grid(True)
+plt.legend()
+plt.tight_layout()
+plt.show()
+
+
 import pandas as pd
 
 # 1. Sample Data banana
