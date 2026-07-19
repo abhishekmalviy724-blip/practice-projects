@@ -1,3 +1,25 @@
+import pandas as pd
+
+data = {
+    "Name": ["Rahul", "Priya", "Amit"],
+    "Math": [80, 95, 70],
+    "Science": [75, 90, 65],
+    "English": [90, 85, 75]
+}
+
+df = pd.DataFrame(data)
+
+df["Total"] = df["Math"] + df["Science"] + df["English"]
+df["Average"] = df["Total"] / 3
+
+print(df)
+
+print("Highest Scorer:")
+print(df.loc[df["Total"].idxmax()])
+
+df.to_csv("student_report.csv", index=False)
+
+
 
 x = [1, 2, 3, 4, 5]
 y = [10, 20, 15, 25, 30]
