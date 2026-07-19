@@ -1,3 +1,14 @@
+
+x = [1, 2, 3, 4, 5]
+y = [10, 20, 15, 25, 30]
+plt.plot(x, y, marker='o', color='blue')
+plt.title("Simple Line Graph")
+plt.xlabel("X-axis")
+plt.ylabel("Y-axis")
+plt.grid(True)
+plt.show()
+
+
 a = float(input("Enter first number: "))
 b = float(input("Enter second number: "))
 
