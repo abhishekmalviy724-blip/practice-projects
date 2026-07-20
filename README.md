@@ -1,3 +1,22 @@
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+tips = sns.load_dataset("tips")
+
+sns.barplot(
+    data=tips,
+    x="day",
+    y="total_bill",
+    hue="sex"
+)
+
+plt.title("Average Total Bill by Day and Gender")
+plt.xlabel("Day")
+plt.ylabel("Average Total Bill")
+plt.show()
+
+
+
 import pandas as pd
 
 data = {
