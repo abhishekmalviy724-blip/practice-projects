@@ -1,3 +1,15 @@
+# import matplotlib.pyplot as plt
+# import pandas as pd
+# import seaborn as sns
+# a=pd.read_csv("Walmart_Sales.csv")
+
+# b=a.nlargest(10,columns="Weekly_Sales")
+# sns.barplot(data=b,x="Weekly_Sales",y="Date")
+# plt.show()
+
+# a.plot(x="Weekly_Sales",kind="bar")
+# plt.show()
+
 import seaborn as sns
 import matplotlib.pyplot as plt
 
