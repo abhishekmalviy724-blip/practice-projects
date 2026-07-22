@@ -1,3 +1,50 @@
+
+import numpy as np
+
+a = np.array([[2, 4, 6], [8, 10, 12], [14, 16, 18]])
+b = np.array([[1, 3, 5], [7, 9, 11], [13, 15, 17]])
+
+print("Array A:")
+print(a)
+
+print("\nArray B:")
+print(b)
+
+print("\nAddition:")
+print(a + b)
+
+print("\nSubtraction:")
+print(a - b)
+
+print("\nMultiplication:")
+print(a * b)
+
+print("\nMatrix Multiplication:")
+print(np.dot(a, b))
+
+print("\nTranspose of A:")
+print(a.T)
+
+print("\nMean of A:")
+print(np.mean(a))
+
+print("\nMaximum of A:")
+print(np.max(a))
+
+print("\nMinimum of A:")
+print(np.min(a))
+
+print("\nSum of A:")
+print(np.sum(a))
+
+print("\nShape of A:")
+print(a.shape)
+
+print("\nReshaped A:")
+print(a.reshape(1, 9))
+
+
+
 # import matplotlib.pyplot as plt
 # import pandas as pd
 # import seaborn as sns
