@@ -1,3 +1,35 @@
+import pandas as pd
+
+data = {
+    "Name": ["Aman", "Riya", "Karan", "Neha", "Rahul"],
+    "Math": [78, 92, 65, 88, 75],
+    "Science": [82, 90, 70, 85, 80],
+    "English": [75, 89, 68, 91, 77]
+}
+
+df = pd.DataFrame(data)
+
+print("Student Dataset")
+print(df)
+
+df["Total"] = df["Math"] + df["Science"] + df["English"]
+df["Average"] = df["Total"] / 3
+df["Result"] = df["Average"].apply(lambda x: "Pass" if x >= 60 else "Fail")
+
+print("\nDataset with Total, Average and Result")
+print(df)
+
+print("\nTop Scorer")
+print(df.loc[df["Total"].idxmax()])
+
+print("\nAverage Marks in Each Subject")
+print(df[["Math", "Science", "English"]].mean())
+
+print("\nStudents Scoring More Than 80 Average")
+print(df[df["Average"] > 80])
+
+
+
 
 import numpy as np
 
