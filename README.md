@@ -1,6 +1,46 @@
 
 import numpy as np
 
+marks = np.array([
+    [78, 85, 90, 88],
+    [65, 70, 75, 80],
+    [92, 95, 89, 94],
+    [55, 60, 58, 62],
+    [81, 79, 84, 86]
+])
+
+print("Marks Dataset")
+print(marks)
+
+print("\nTotal Marks of Each Student")
+print(np.sum(marks, axis=1))
+
+print("\nAverage Marks of Each Student")
+print(np.mean(marks, axis=1))
+
+print("\nHighest Marks in Each Subject")
+print(np.max(marks, axis=0))
+
+print("\nLowest Marks in Each Subject")
+print(np.min(marks, axis=0))
+
+print("\nOverall Average")
+print(np.mean(marks))
+
+bonus = marks + 5
+
+print("\nMarks After Bonus")
+print(bonus)
+
+print("\nDifference")
+print(bonus - marks)
+
+print("\nStudents Passed (Average >= 60)")
+print(np.mean(marks, axis=1) >= 60)
+
+
+import numpy as np
+
 a = np.array([[2, 4, 6], [8, 10, 12], [14, 16, 18]])
 b = np.array([[1, 3, 5], [7, 9, 11], [13, 15, 17]])
 
