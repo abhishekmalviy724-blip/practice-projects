@@ -22,6 +22,30 @@ print("Apps with Rating >= 4.5")
 print(high_rated[["App", "Category", "Rating"]].head(10))
 
 
+import numpy as np
+import pandas as pd
+
+data = pd.read_csv("googleplaystore.csv")
+
+data["Rating"] = pd.to_numeric(data["Rating"], errors="coerce")
+data["Reviews"] = pd.to_numeric(data["Reviews"], errors="coerce")
+
+ratings = data["Rating"].dropna().to_numpy()
+reviews = data["Reviews"].dropna().to_numpy()
+
+print("Total Apps:", len(data))
+print("Average Rating:", np.mean(ratings))
+print("Highest Rating:", np.max(ratings))
+print("Lowest Rating:", np.min(ratings))
+print("Average Reviews:", np.mean(reviews))
+print("Maximum Reviews:", np.max(reviews))
+print("Minimum Reviews:", np.min(reviews))
+
+high_rated = data[data["Rating"] >= 4.5]
+print("Apps with Rating >= 4.5")
+print(high_rated[["App", "Category", "Rating"]].head(10))
+
+
 
 import pandas as pd
 
