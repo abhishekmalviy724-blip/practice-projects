@@ -1,3 +1,40 @@
+balance = 5000
+
+for i in range(100):
+    print("\nATM Menu")
+    print("1. Check Balance")
+    print("2. Deposit")
+    print("3. Withdraw")
+    print("4. Exit")
+
+    choice = input("Enter your choice: ")
+
+    if choice == "1":
+        print("Available Balance:", balance)
+
+    elif choice == "2":
+        amount = float(input("Enter deposit amount: "))
+        if amount > 0:
+            balance += amount
+            print("Deposit Successful")
+
+    elif choice == "3":
+        amount = float(input("Enter withdrawal amount: "))
+        if amount <= balance:
+            balance -= amount
+            print("Withdrawal Successful")
+        else:
+            print("Insufficient Balance")
+
+    elif choice == "4":
+        print("Thank You")
+        break
+
+    else:
+        print("Invalid Choice")
+
+
+
 import numpy as np
 import pandas as pd
 
