@@ -1,3 +1,13 @@
+n = int(input())
+arr = input().split()
+
+for i in range(1, n + 1):
+    if str(i) not in arr:
+        print(i)
+        break
+
+
+
 balance = 5000
 
 for i in range(100):
