@@ -1,3 +1,31 @@
+students = {
+    "Aman": [78, 85, 92],
+    "Rahul": [65, 72, 80],
+    "Neha": [90, 88, 95],
+    "Vikas": [55, 68, 60]
+}
+
+def calculate_result(marks):
+    total = sum(marks)
+    percentage = total / len(marks)
+
+    if percentage >= 90:
+        grade = "A"
+    elif percentage >= 75:
+        grade = "B"
+    elif percentage >= 60:
+        grade = "C"
+    else:
+        grade = "D"
+
+    return total, percentage, grade
+
+for name, marks in students.items():
+    total, percentage, grade = calculate_result(marks)
+    print(name, "→ Total:", total, "| Percentage:", percentage, "| Grade:", grade)
+
+
+
 n = int(input())
 arr = input().split()
 
