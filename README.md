@@ -1,3 +1,28 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.arange(1, 11)
+y1 = x**2
+y2 = x**3
+
+plt.figure(figsize=(9, 5))
+
+plt.plot(x, y1, marker='o', linewidth=2, label='x²')
+plt.plot(x, y2, marker='s', linewidth=2, label='x³')
+
+plt.fill_between(x, y1, alpha=0.2)
+
+plt.title("Quadratic vs Cubic Growth")
+plt.xlabel("X Values")
+plt.ylabel("Y Values")
+plt.xticks(x)
+plt.grid(True, linestyle='--', alpha=0.5)
+plt.legend()
+plt.tight_layout()
+
+plt.show()
+
+
 students = {
     "Aman": [78, 85, 92],
     "Rahul": [65, 72, 80],
