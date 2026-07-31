@@ -1,3 +1,25 @@
+import plotly.express as px
+import pandas as pd
+
+data = {
+    "Month": ["Jan", "Feb", "Mar", "Apr", "May"],
+    "Sales": [120, 180, 150, 220, 260]
+}
+
+df = pd.DataFrame(data)
+
+fig = px.line(
+    df,
+    x="Month",
+    y="Sales",
+    title="Monthly Sales Trend",
+    markers=True
+)
+
+fig.show()
+
+
+
 import matplotlib.pyplot as plt
 import numpy as np
 
