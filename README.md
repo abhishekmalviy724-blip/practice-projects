@@ -1,3 +1,17 @@
+arr = [12, 45, 67, 23, 89, 67, 90, 54]
+
+largest = second = float("-inf")
+
+for num in arr:
+    if num > largest:
+        second = largest
+        largest = num
+    elif largest > num > second:
+        second = num
+
+print(second)
+
+
 import plotly.express as px
 import pandas as pd
 
