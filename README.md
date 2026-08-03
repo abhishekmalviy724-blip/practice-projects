@@ -1,3 +1,19 @@
+def count_vowels(text):
+    vowels = "aeiouAEIOU"
+    count = 0
+
+    for ch in text:
+        if ch in vowels:
+            count += 1
+
+    return count
+
+sentence = input("Enter a sentence: ")
+
+print("Total vowels:", count_vowels(sentence))
+
+
+
 arr = [12, 45, 67, 23, 89, 67, 90, 54]
 
 largest = second = float("-inf")
