@@ -1,3 +1,31 @@
+def count_frequency(numbers):
+    frequency = {}
+
+    for num in numbers:
+        if num in frequency:
+            frequency[num] += 1
+        else:
+            frequency[num] = 1
+
+    return frequency
+
+n = int(input("Enter how many numbers: "))
+
+numbers = []
+
+for i in range(n):
+    value = int(input("Enter number: "))
+    numbers.append(value)
+
+result = count_frequency(numbers)
+
+print("Frequency of each number:")
+
+for key, value in result.items():
+    print(key, "->", value)
+
+
+
 def count_vowels(text):
     vowels = "aeiouAEIOU"
     count = 0
