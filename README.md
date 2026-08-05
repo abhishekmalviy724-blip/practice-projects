@@ -1,3 +1,18 @@
+def remove_duplicates(numbers):
+    unique = []
+
+    for num in numbers:
+        if num not in unique:
+            unique.append(num)
+
+    return unique
+
+nums = list(map(int, input("Enter numbers: ").split()))
+
+print("Original List:", nums)
+print("Without Duplicates:", remove_duplicates(nums))
+
+
 def count_frequency(numbers):
     frequency = {}
 
