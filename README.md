@@ -1,6 +1,17 @@
 n = int(input())
 arr = input().split()
 
+small = arr[0]
+
+for i in range(1, n):
+    if arr[i] < small:
+        small = arr[i]
+
+print(small)
+
+n = int(input())
+arr = input().split()
+
 for i in range(n - 1, -1, -1):
     print(arr[i], end=" ")
 
