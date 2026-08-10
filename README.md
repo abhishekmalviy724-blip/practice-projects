@@ -1,6 +1,17 @@
 n = int(input())
 arr = input().split()
 
+sum = 0
+
+for i in range(n):
+    sum += int(arr[i])
+
+print(sum)
+
+
+n = int(input())
+arr = input().split()
+
 small = arr[0]
 
 for i in range(1, n):
