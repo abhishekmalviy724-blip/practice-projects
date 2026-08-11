@@ -1,6 +1,18 @@
 n = int(input())
 arr = input().split()
 
+maxi = int(arr[0])
+
+for i in range(1, n):
+    if int(arr[i]) > maxi:
+        maxi = int(arr[i])
+
+print(maxi)
+
+
+n = int(input())
+arr = input().split()
+
 sum = 0
 
 for i in range(n):
