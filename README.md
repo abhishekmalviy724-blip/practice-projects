@@ -1,3 +1,17 @@
+def find_max(numbers):
+    maximum = numbers[0]
+
+    for num in numbers:
+        if num > maximum:
+            maximum = num
+
+    return maximum
+
+numbers = list(map(int, input("Enter numbers: ").split()))
+
+print("Largest:", find_max(numbers))
+
+
 n = int(input())
 arr = input().split()
 
