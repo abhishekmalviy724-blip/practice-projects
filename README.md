@@ -1,3 +1,12 @@
+def reverse_words(text):
+    words = text.split()
+    return " ".join(words[::-1])
+
+sentence = input("Enter sentence: ")
+
+print(reverse_words(sentence))
+
+
 def find_max(numbers):
     maximum = numbers[0]
 
