@@ -1,3 +1,15 @@
+n = int(input())
+arr = input().split()
+x = input()
+
+for i in range(n):
+    if arr[i] == x:
+        print("Found")
+        break
+else:
+    print("Not Found")
+
+
 nums = list(map(int, input("Enter numbers: ").split()))
 
 even = [n for n in nums if n % 2 == 0]
