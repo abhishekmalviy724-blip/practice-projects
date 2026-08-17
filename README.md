@@ -1,3 +1,12 @@
+def find_common(a, b):
+    return list(set(a) & set(b))
+
+a = list(map(int, input("Enter first list: ").split()))
+b = list(map(int, input("Enter second list: ").split()))
+
+print("Common:", find_common(a, b))
+
+
 n = int(input())
 arr = input().split()
 x = input()
