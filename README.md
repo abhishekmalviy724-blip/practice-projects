@@ -1,3 +1,11 @@
+def max_difference(nums):
+    a=max(nums)
+    b=min(nums)
+    return a-b
+print(max_difference([10, 3, 5, 6, 20, 2,56,1]))
+
+
+
 def find_common(a, b):
     return list(set(a) & set(b))
 
