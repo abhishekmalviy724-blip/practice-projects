@@ -1,3 +1,25 @@
+a=[12,34,567,45,3,3,455,23,56]
+largest=a[0]
+sec_largest = a[0]
+third_largest = a[0]
+fourth_largest = a[0]
+for i in a:
+    if i>largest:
+        fourth_largest=third_largest
+        third_largest=sec_largest
+        sec_largest=largest
+        largest=i
+    elif i>sec_largest and i != largest:
+        third_largest=sec_largest
+        sec_largest=i
+    elif i>third_largest and i != largest and i != sec_largest:
+        fourth_largest=third_largest
+        third_largest=i
+    elif i>fourth_largest  and i != largest and i != sec_largest and i !=third_largest:
+        fourth_largest=i
+print(largest,sec_largest,third_largest,fourth_largest)
+
+
 def is_prime(n):
     if n < 2:
         return False
