@@ -1,3 +1,11 @@
+a = [34,23,45,2,56,89,4534,1]
+n=len(a) 
+for i in range(n) :
+    for j in range(n-i-1):
+        if a[j]> a[j+1]:
+            a[j], a[j+1] = a[j+1], a[j]
+print(a)
+
 a=[12,34,567,45,3,3,455,23,56]
 largest=a[0]
 sec_largest = a[0]
