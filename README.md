@@ -266,3 +266,48 @@ print("Highest Transaction:", max(transactions))
 print("Lowest Transaction:", min(transactions))
 print("Number of Withdrawals:", len(withdrawals))
 ____________________________________________________________________________________________________________________________________________________________________________
+
+import numpy as np
+sugar_levels = np.array([85, 140, 165, 95, 210, 130, 180, 75, 155, 110])
+print("Avrage Blood Sugar:",sugar_levels.mean())
+print("Max Boold Sugar:",sugar_levels.max())
+print("Max Boold Sugar:",sugar_levels.min())
+print(sugar_levels[np.where(sugar_levels >= 140)])
+print(sugar_levels[np.where(sugar_levels >=100)and(sugar_levels<=160)])
+print(len(sugar_levels[np.where(sugar_levels >=140)]))
+print(sugar_levels%10)
+______________________________________________________________________________________________
+import pandas as pd
+data = {
+    "Name": ["Aman", "Riya", "Rohit", "Neha", "Karan", "Priya"],
+    "Age": [65, 22, 72, 45, 60, 30],
+    "Department": ["Cardiology", "Neurology", "Cardiology", "Ortho", "Neurology", "Ortho"],
+    "Billing": [50000, 25000, 75000, None, 40000, 30000],
+    "Status": ["Admitted", "Discharged", "Admitted", "Admitted", "Discharged", "Admitted"]
+}
+df = pd.DataFrame(data)
+print(df.shape)
+df["Billing"]=df["Billing"].where(df["Billing"].notna(),df["Billing"].mean())
+print(df.loc[df["Age"]>=50,"Name"])
+print(df.groupby("Department")["Billing"].mean())
+print((df["Status"]=="Admitted").sum())
+print(df.sort_values(by="Age",ascending=False))
+______________________________________________________________________________________________
+from common_imports import *
+data = {
+    "Department": ["Cardiology", "Neurology", "Cardiology", "Ortho", "Neurology", "Ortho"],
+    "Age": [65, 22, 72, 45, 60, 30],
+    "Billing": [50000, 25000, 75000, 35000, 40000, 30000]
+}
+df = pd.DataFrame(data)
+plt.figure(figsize=(8,5))
+plt.plot(df.groupby("Department")["Billing"].mean())
+plt.show()
+plt.hist(df["Age"],bins=15)
+plt.show()
+plt.scatter(df["Age"],df["Billing"])
+plt.show()
+data = pd.get_dummies(df[["Age","Billing","Department"]], columns=["Department"],dtype=int)
+sns.heatmap(data.corr(), annot=True, cmap="coolwarm")
+plt.show()
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________________
