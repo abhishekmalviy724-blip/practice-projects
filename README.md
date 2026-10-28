@@ -311,3 +311,27 @@ data = pd.get_dummies(df[["Age","Billing","Department"]], columns=["Department"]
 sns.heatmap(data.corr(), annot=True, cmap="coolwarm")
 plt.show()
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+expenses = []
+
+while True:
+    name = input("Expense name (exit to stop): ")
+
+    if name.lower() == "exit":
+        break
+
+    amount = float(input("Amount: "))
+
+    expenses.append({
+        "name": name,
+        "amount": amount
+    })
+
+total = 0
+
+for expense in expenses:
+    print(expense["name"], expense["amount"])
+    total += expense["amount"]
+
+print("Total Expenses:", total)
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________________
